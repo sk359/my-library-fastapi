@@ -2,7 +2,11 @@ from fastapi import APIRouter
 
 # https://fastapi.tiangolo.com/tutorial/bigger-applications/#apirouter
 
-router = APIRouter(prefix="/books")
+"""
+REST endpoints that return JSON
+"""
+
+router = APIRouter(prefix="/api/books")
 
 @router.get("/", tags=["books"])
 async def get_all_books():
