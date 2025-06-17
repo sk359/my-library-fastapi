@@ -1,6 +1,7 @@
 {% extends "base_wrapper.html" %}
 {% block title %}Neues Buch{% endblock %}
 {% block content %}
+    {% include 'navbar.html' %}
     <div id="new-book-outer-div">
       <h3 class="pb-4">Neues Buch anlegen</h3>
       {% include 'book-editor.html' %}
