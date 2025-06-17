@@ -17,6 +17,11 @@ async def index(request: Request):
     return templates.TemplateResponse(request=request, name="login.html")
 
 
+@router.get("/new", response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse(request=request, name="new-book.html")
+
+
 @router.get("/books/{book_id}", response_class=HTMLResponse)
 async def index(request: Request, book_id: str):
     print("id", book_id)

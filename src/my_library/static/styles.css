@@ -26,3 +26,10 @@
 #table-wrapper {
   padding: 2% 20% 2% 20%;
 }
+
+#new-book-outer-div {
+  text-align: center;
+  padding-left: 20%;
+  padding-top: 20px;
+  width: 80%;
+}
