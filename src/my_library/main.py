@@ -6,5 +6,5 @@ from .routers.views import router as view_router
 
 app = FastAPI()
 app.include_router(view_router)
-#app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 #templates = Jinja2Templates(directory="views")

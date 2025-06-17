@@ -1,11 +1,12 @@
 {% extends "base_wrapper.html" %}
 {% block title %}Login{% endblock %}
 {% block content %}
-    <div>Login now</div>
-    <form hx-post="/signup" hx-target="#signupform" hx-swap="outerHTML">
-      <input type="text" id="username" name="username" placeholder="Username" required><br>
-      <input type="password" id="password" name="password" placeholder="Password" required><br>
-      <input type="submit" value="Submit">
-    </form>
-    <button hx-get="/servelogin" hx-target="#signupform" hx-swap="outerHTML">Login</button>
+    <div id="signupform">
+        <div>Einloggen</div>
+        <form hx-post="/login" hx-target="#signupform" hx-swap="outerHTML">
+          <input type="text" id="username" name="username" placeholder="Username"><br>
+          <input type="password" id="password" name="password" placeholder="Password"><br>
+          <input type="submit" value="Login">
+        </form>
+    </div>
 {% endblock %}

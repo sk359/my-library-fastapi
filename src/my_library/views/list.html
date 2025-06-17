@@ -1,0 +1,44 @@
+<div id="table-wrapper">
+  <table class="table table-striped">
+      <thead>
+        <tr class="table-dark">
+          <th>Name</th>
+          <th>Jahr</th>
+          <th>Autor*innen</th>
+          <th>Bewertung</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for book in books %}
+        <tr>
+          <td>{{book.title}}</td>
+          <td>{{book.year}}</td>
+          <td>{{book.author_string()}}</td>
+          <td>{{book.rating}}</td>
+          <td>
+            <button type="button" class="btn btn-primary"
+                    hx-get="/books/{{book.book_id}}"
+                    hx-target="#detail-modal-content"
+                    hx-swap="innerHTML"
+                    hx-trigger="click"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-container"
+            >Details</button>
+          </td>
+        </tr>
+       {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+
+<div id="modal-container"
+    class="modal modal-blur fade"
+    style="display: none"
+    aria-hidden="false"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div id="detail-modal-content" class="modal-content"></div>
+    </div>
+</div>
