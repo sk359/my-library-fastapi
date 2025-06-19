@@ -1,1 +1,15 @@
-<div>Details für {{book.title}}</div>
+<div style="width:400px">
+<div class="row mb-3">
+  <div class="col-sm-5">
+    <img src="{{book.image_url}}">
+  </div>
+  <div class="col-sm-7">
+    <strong>{{book.title}} ({{book.year}})</strong>
+    <p>von {{book.author_string()}}</p>
+    <p>Stichwörter: {{book.keyword_string}}</p>
+    <p>{{book.abstract}}</p>
+  </div>
+  </div>
+  <hr/>
+  <p>{{book.summary}}</p>
+</div>

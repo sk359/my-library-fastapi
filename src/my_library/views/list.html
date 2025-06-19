@@ -25,6 +25,22 @@
                     data-bs-toggle="modal"
                     data-bs-target="#modal-container"
             >Details</button>
+            <button type="button" class="btn btn-info"
+                    hx-get="/books/edit/{{book.book_id}}"
+                    hx-target="#detail-modal-content"
+                    hx-swap="innerHTML"
+                    hx-trigger="click"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-container"
+            >Editieren</button>
+            <button type="button" class="btn btn-danger"
+                    hx-get="/overview"
+                    hx-target="#detail-modal-content"
+                    hx-swap="innerHTML"
+                    hx-trigger="click"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-container"
+            >Löschen</button>
           </td>
         </tr>
        {% endfor %}

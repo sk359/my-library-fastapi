@@ -2,7 +2,8 @@ from typing import Union
 from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI
 from fastapi.templating import Jinja2Templates
-from .routers.views import router as view_router
+from src.my_library.routers.views import router as view_router
+
 
 app = FastAPI()
 app.include_router(view_router)
